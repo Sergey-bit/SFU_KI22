@@ -30,7 +30,7 @@ size_t get_index(const int arr[], const size_t len)
 		}
 	}
 
-	return -1;
+	return -1; // SIZE_T - беззнаковый тип, поэтому функция вернет максимальное положительное число. -1 = 111111111111 в двоичной -> если тип беззнаковый 111111111111 - очень большое число
 }
 int my_task(const int A[], const int lenA, int B[], const int lenB)
 {
