@@ -2,15 +2,18 @@
 #include <iostream>
 #include <stdlib.h>
 
+#define S_LENGTH 10000
+#define WORDS_LENGTH 7
+
 size_t join(char* s_out, size_t len, const char* const* s_in, size_t n_in, const char* sep);
 
 int main()
 {
-	char s[10000];
+	char s[S_LENGTH];
 	char delimeter;
 	const char* words[11] = { "Hello", "everybody", "!", "Good", "luck", "to", "you" };
 
-	join(s, 10000, words, 7, " ");
+	join(s, S_LENGTH, words, WORDS_LENGTH, " ");
 	std::cout << "joined string (s_out): " << s << std::endl;
 
 	system("pause");
@@ -23,12 +26,12 @@ size_t join(char* s_out, size_t len, const char* const* s_in, size_t n_in, const
 
 	for (size_t i = 0; i < n_in && j < len; i++)
 	{
-		for (size_t k = 0; s_in[i][k] != '\0'; k++, j++)
+		for (size_t k = 0; s_in[i][k] != '\0' && j < len; k++, j++)
 		{
 			s_out[j] = s_in[i][k];
 		}
 
-		for (size_t n = 0; sep[n] != '\0'; n++, j++)
+		for (size_t n = 0; sep[n] != '\0' && j < len; n++, j++)
 		{
 			s_out[j] = sep[n];
 		}
