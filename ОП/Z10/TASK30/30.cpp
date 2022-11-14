@@ -1,6 +1,6 @@
-#include <functional>
+// #include <functional> Вроде не нужно
 #include <iostream>
-#include <stdlib.h>
+// #include <stdlib.h> Вроде также не нужно
 
 #define S_LENGTH 10000
 #define WORDS_LENGTH 7
