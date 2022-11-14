@@ -4,6 +4,7 @@
 
 #define S_LENGTH 10000
 #define WORDS_LENGTH 7
+#define MAX_WORD_LENGTH 11
 
 size_t join(char* s_out, size_t len, const char* const* s_in, size_t n_in, const char* sep);
 
@@ -11,7 +12,7 @@ int main()
 {
 	char s[S_LENGTH];
 	char delimeter;
-	const char* words[11] = { "Hello", "everybody", "!", "Good", "luck", "to", "you" };
+	const char* words[MAX_WORD_LENGTH] = { "Hello", "everybody", "!", "Good", "luck", "to", "you" };
 
 	join(s, S_LENGTH, words, WORDS_LENGTH, " ");
 	std::cout << "joined string (s_out): " << s << std::endl;
