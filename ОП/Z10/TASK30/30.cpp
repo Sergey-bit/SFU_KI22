@@ -36,11 +36,11 @@ size_t join(char* s_out, size_t len, const char* const* s_in, size_t n_in, const
 
 	if (j < len - 1)
 	{
-		s_out[j++] = '\0';
+		s_out[j] = '\0';
 	}
 	else
 	{
-		s_out[j] = '\0';
+		s_out[j--] = '\0';
 	}
 
 	return j;
