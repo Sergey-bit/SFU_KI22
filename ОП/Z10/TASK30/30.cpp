@@ -11,10 +11,10 @@ size_t join(char* s_out, size_t len, const char* const* s_in, size_t n_in, const
 int main()
 {
 	char s[S_LENGTH];
-	char delimeter;
+	const char delimeter[] = " ";
 	const char* words[MAX_WORD_LENGTH] = { "Hello", "everybody", "!", "Good", "luck", "to", "you" };
 
-	join(s, S_LENGTH, words, WORDS_LENGTH, " ");
+	join(s, S_LENGTH, words, WORDS_LENGTH, delimeter);
 	std::cout << "joined string (s_out): " << s << std::endl;
 
 	system("pause");
